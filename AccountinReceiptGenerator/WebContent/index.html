@@ -2,28 +2,151 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Purchase Order Form Generator</title>
 </head>
+
+<style>
+	#seller {
+		float:left;
+	    line-height:30px;
+	    height:100px;
+	    width:50px;
+
+	}
+
+	#purchases{
+		float:right;
+    	width:350px; 
+    	margin-right:530px; 		 
+	}
+	#receipt{
+		float:right;
+    	width:350px;
+    	padding:10px;
+    	margin-top:-950px;
+    	margin-bottom:520px;	
+    	margin-right:130px; 	 
+	}
+
+</style>
+
+
 <body>
-	<center>
-		<h2> Welcome to Receipt Generator </h2>
-		<br>
+	<div>
+		<center><h1>Purchase Order Form Generator</h2></center>
+		<i> Please fill in the blanks: </i>
+		<form action="process.html" method="post">
 
-		<legend>Please choose a receipt to generate: </legend>
-		
-		<form action="official_receipt.jsp" method="post">
-			<p><input type="submit" value="Official Receipt"></p>
+			<div id="seller">
+				<fieldset>
+					<fieldset>
+						<legend><b>BUYER INFORMATION </b></legend>
+						<p>Company Name: <input type="text" name="po_bcompany" size="20"></p>
+						<p>Street Address: <input type="text" name="po_baddress" size="50"></p>
+						<p>City: <input type="text" name="po_bcity" size="50"></p>
+						<p>Zip Code: <input type="text" name="po_bzip" size="6"></p>
+						<p>Telephone Number: <input type="text" name="po_btelephone" size="20"></p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend><b>P.O.</b></legend>
+						<p>PO Number: <input type="text" name="po_number" size="16"></p>
+						<hr>
+						<p>Date: <input type="date" name="po_date" size="16"></p>
+						<p>Ship Via:  <input type="text" name="po_ship" size="16"></p>
+						<p>FOB Point:  <input type="text" name="po_fob" size="16"></p>
+						<p>Terms:  <input type="text" name="po_terms" size="16"></p>
+						<p>Customer (Name/Number): <input type="text" name="po_customer_name" size="16"></p>
+					</fieldset>
+				</fieldset>
+			</div> 
+			
+		 	<div id="purchases">
+				<fieldset>
+					<legend><b>VENDOR INFORMATION</b></legend>
+					<i><font color="red">**max of 5 purchases only</font></i>
+					<br>
+					<fieldset>
+						<legend>VENDOR</legend>
+						<p>Company Name: <input type="text" name="po_vcompany" size="20"></p>
+						<p>Street Address: <input type="text" name="po_vaddress" size="50"></p>
+						<p>City: <input type="text" name="po_vcity" size="50"></p>
+						<p>Zip Code: <input type="text" name="po_vzip" size="6"></p>
+						<p>Telephone Number: <input type="text" name="po_vtelephone" size="20"></p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>SHIP TO</legend>
+						<p>Company Name: <input type="text" name="po_scompany" size="20"></p>
+						<p>Street Address: <input type="text" name="po_saddress" size="50"></p>
+						<p>City: <input type="text" name="po_scity" size="50"></p>
+						<p>Zip Code: <input type="text" name="po_szip" size="6"></p>
+						<p>Telephone Number: <input type="text" name="po_stelephone" size="20"></p>
+					</fieldset>
+				</fieldset>
+			</div>
+
+			<div id="purchases">
+				<fieldset>
+					<legend><b>PURCHASES</b></legend>
+					<i><font color="red">**max of 5 purchases only</font></i>
+					<br>
+					<fieldset>
+						<legend>Item #1 </legend>
+						<p>Item# : <input type="text" name="po_item1_num" size="20" value=" "></p>
+						<p>Description: <input type="text" name="po_item1_desc" size="20" value=" " placeholder="Item Name/Description"></p>
+						<p>Quantity: <input type="number" name="po_item1_quantity" size="20" value="0" placeholder="0" min="0" ></p>
+						<p>Unit Price: <input type="number" name="po_item1_price" size="20" value="0.00" min="0.00" placeholder="0.00"></p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Item #2 </legend>
+						<p>Item# : <input type="text" name="po_item2_num" size="20" value=" "></p>
+						<p>Description: <input type="text" name="po_item2_desc" size="20" value=" " placeholder="Item Name/Description"></p>
+						<p>Quantity: <input type="text" name="po_item2_quantity" size="20"  value="0" placeholder="0" min="0" ></p>
+						<p>Unit Price: <input type="text" name="po_item2_price" size="20" value="0.00" min="0.00" placeholder="0.00"></p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Item #3 </legend>
+						<p>Item# : <input type="text" name="po_item3_num" size="20" value=" "></p>
+						<p>Description: <input type="text" name="po_item3_desc" size="20" value=" " placeholder="Item Name/Description"></p>
+						<p>Quantity: <input type="text" name="po_item3_quantity" size="20"  value="0" placeholder="0" min="0" ></p>
+						<p>Unit Price: <input type="text" name="po_item3_price" size="20" value="0.00" min="0.00" placeholder="0.00"></p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Item #4 </legend>
+						<p>Item# : <input type="text" name="po_item4_num" size="20" value=" "></p>
+						<p>Description: <input type="text" name="po_item4_desc" size="20" value=" " placeholder="Item Name/Description"></p>
+						<p>Quantity: <input type="text" name="po_item4_quantity" size="20"  value="0" placeholder="0" min="0" ></p>
+						<p>Unit Price: <input type="text" name="po_item4_price" size="20" value="0.00" min="0.00" placeholder="0.00"></p>
+					</fieldset>
+					<br>
+					<fieldset>
+						<legend>Item #5 </legend>
+						<p>Item# : <input type="text" name="po_item5_num" size="20" value=" "></p>
+						<p>Description: <input type="text" name="po_item5_desc" size="20" value=" " placeholder="Item Name/Description"></p>
+						<p>Quantity: <input type="text" name="po_item5_quantity" size="20"  value="0" placeholder="0" min="0" ></p>
+						<p>Unit Price: <input type="text" name="po_item5_price" size="20" value="0.00" min="0.00" placeholder="0.00"></p>
+					</fieldset>
+				</fieldset>
+			</div>
+
+			<div id="receipt">
+				<fieldset>
+					
+					<p>Value Added Tax (VAT) Rate (%): <input type="number" name="po_vat" size="3"></p>
+
+				</fieldset>
+
+			</div>
+			<br>
+			<br>
+			
+			<center><input type="submit" value="Generate Official Receipt"></center>
 		</form>
 
-		<form action="sales_invoice.html" method="post">
-			<p><input type="submit" value="Official Receipt"></p>
-		</form>
-
-		<form action="official_receipt.html" method="post">
-			<p><input type="submit" value="Official Receipt"></p>
-		</form>
-
-	
-	</center>
+	</div>
 </body>
 </html>

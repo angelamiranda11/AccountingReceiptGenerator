@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.ORBean;
-import factory.ORFactoryBean;
+import model.POBean;
+import factory.FactoryBean;
 
-@WebServlet("/processOR.html")
-public class processOR extends HttpServlet {
+@WebServlet("/process.html")
+public class process extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
@@ -101,7 +101,7 @@ public class processOR extends HttpServlet {
 						or_vat!= 0 && 
 						or_return_policy!=null) 
 			{
-					ORBean or = ORFactoryBean.getInstance(or_store_name
+					POBean or = FactoryBean.getInstance(or_store_name
 								, or_address
 								, or_zip_code
 								, or_telephone

@@ -4,7 +4,7 @@ import java.io.*;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class MyPDFCreator {
-	public static void generatePDF(ORBean or){
+	public static void generatePDF(POBean or){
 		Document docu = new Document();
 		
 		try

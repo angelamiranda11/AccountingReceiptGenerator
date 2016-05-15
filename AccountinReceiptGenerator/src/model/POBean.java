@@ -1,7 +1,7 @@
 package model;
 
 
-public class ORBean {
+public class POBean {
 		String or_store_name;
 		String or_address;
 		String or_zip_code;

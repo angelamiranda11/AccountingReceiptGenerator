@@ -1,9 +1,9 @@
 package factory;
 
-import model.ORBean;
+import model.POBean;
 
-public class ORFactoryBean {
-	public static ORBean getInstance(String or_store_name,
+public class FactoryBean {
+	public static POBean getInstance(String or_store_name,
 				String or_address,
 				String or_zip_code,
 				String or_telephone,
@@ -31,7 +31,7 @@ public class ORFactoryBean {
 				int or_vat,
 				String or_return_policy)
 	{
-		ORBean or = new ORBean();
+		POBean or = new POBean();
 		
 		or.setOr_store_name(or_store_name);
 		or.setOr_address(or_address);
