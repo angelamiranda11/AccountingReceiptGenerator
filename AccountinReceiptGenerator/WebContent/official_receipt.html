@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Generate Official Receipt</title>
+</head>
+
+<style>
+	#sellers {
+		float:right;
+		float:left;	  
+	    width:350px;
+
+	}
+
+	#purchases{
+		float:right;
+    	width:350px; 
+    	margin-right:470px; 		 
+	}
+	#receipt{
+		position:float;
+		float:right;
+    	width:350px;
+    	padding:10px;
+    	margin-top:-950px;
+    	margin-bottom:520px;	
+    	margin-right:70px; 	 
+	}
+
+</style>
+
+
+<body>
+	 <div id="sellers">
+		<fieldset>
+			<legend><b>SELLER INFORMATION </b></legend>
+			<p>Store Name: <input type="text" name="or_store_name" size="20"></p>
+			<p>Address: <input type="text" name="or_address" size="50"></p>
+			<p>Zip Code: <input type="text" name="or_zip_code" size="6"></p>
+			<p>Cashier (Name/Number): <input type="text" name="or_cashier_name" size="16"></p>
+			<p>Customer (Name/Number): <input type="text" name="or_customer_name" size="16"></p>
+			<p>TIN: <input type="text" name="or_tin" size="16"></p>
+		</fieldset>
+	</div> 
+	
+ 	<div id="purchases">
+		<fieldset>
+			<legend><b>PURCHASES</b></legend>
+			<i><font color="red">**max of 5 purchases only</font></i>
+			<br>
+			<fieldset>
+				<legend>Item #1 </legend>
+				<p>Description: <input type="text" name="or_item1" size="20"></p>
+				<p>Quantity: <input type="text" name="or_item1" size="20"></p>
+				<p>Price: <input type="text" name="or_item1" size="20"></p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Item #2 </legend>
+				<p>Description: <input type="text" name="or_item2" size="20"></p>
+				<p>Quantity: <input type="text" name="or_item2" size="20"></p>
+				<p>Price: <input type="text" name="or_item2" size="20"></p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Item #3 </legend>
+				<p>Description: <input type="text" name="or_item3" size="20"></p>
+				<p>Quantity: <input type="text" name="or_item3" size="20"></p>
+				<p>Price: <input type="text" name="or_item3" size="20"></p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Item #4 </legend>
+				<p>Description: <input type="text" name="or_item4" size="20"></p>
+				<p>Quantity: <input type="text" name="or_item4" size="20"></p>
+				<p>Price: <input type="text" name="or_item4" size="20"></p>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Item #5 </legend>
+				<p>Description: <input type="text" name="or_item5" size="20"></p>
+				<p>Quantity: <input type="text" name="or_item5" size="20"></p>
+				<p>Price: <input type="text" name="or_item5" size="20"></p>
+			</fieldset>
+		</fieldset>
+	</div>
+
+	<div id="receipt">
+		<fieldset>
+			<legend><b>PAYMENT METHOD and TAX: </b></legend>
+			<p>Payment Method: 
+					<input type="radio" name="or_payment_method" value="CASH"></p>
+					<input type="radio" name="or_payment_method" value="CREDIT CARD"></p>
+					<input type="radio" name="or_payment_method" value="CHECK"></p>
+
+			<p>Address: <input type="text" name="or_address" size="50"></p>
+			<p>Zip Code: <input type="text" name="or_zip_code" size="6"></p>
+			<p>Cashier (Name/Number): <input type="text" name="or_cashier_name" size="16"></p>
+			<p>Customer (Name/Number): <input type="text" name="or_customer_name" size="16"></p>
+		</fieldset>
+	</div>
+</body>
+</html>
