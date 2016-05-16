@@ -11,38 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<!--
-	PlEASE USE THESE VARIABLES PRA SA "property" attribute here :) 
-	or_store_name
-	or_address
-	or_zip_code
-	or_telephone
-	or_tin
-	or_number
-	or_cashier_name
-	or_customer_name
-	or_item1_des
-	or_item1_quantity
-	or_item1_price
-	or_item2_desc
-	or_item2_quantity
-	or_item2_price
-	or_item3_desc
-	or_item3_quantity
-	or_item3_price
-	or_item4_desc
-	or_item4_quantity
-	or_item4_price
-	or_item5_desc
-	or_item5_quantity
-	or_item5_price
-	or_purchased_date
-	or_payment_method
-	or_vat
-	or_return_policy
--->
-	
+		
 	<h2> Welcome to the Laging Nasisira MRT Application <br></h2>	
 	<p>The fare amount from <jsp:getProperty name="or" property="startNum"/> 
 			station to <jsp:getProperty name="or" property="stopNum"/>  station is <b>P<jsp:getProperty name="or" property="price"/> </b></p>

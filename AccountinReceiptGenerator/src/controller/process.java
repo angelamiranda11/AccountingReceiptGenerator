@@ -189,7 +189,7 @@ public class process extends HttpServlet {
 				
 					request.setAttribute("po", po);
 					
-					RequestDispatcher dispatcher = request.getRequestDispatcher("displayOR.jsp");
+					RequestDispatcher dispatcher = request.getRequestDispatcher("display.jsp");
 					dispatcher.forward(request, response);
 			}
 			else 
